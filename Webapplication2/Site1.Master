@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Webapplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%--our custom css--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+       
+        .bgimg {
+              background-image: url('https://localhost:44362/images/—Pngtree—back to school day linear_1155214.png'); /* The image used */
+              
+              background-position: center; /* Center the image */
+              background-repeat: no-repeat; /* Do not repeat the image */
+              background-size: cover; /* Resize the background image to cover the entire container */
+        }
+         label {
+             
+              color: white;
+            }
+          p {
+             
+              color: white;
+            }
+    </style>
+
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+
+        <div>
+
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="images/adminuser.png" width="30" height="30" />
+                    STUDENT SYSTEM
+
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapsed navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active mr-auto">
+                            <a class="nav-link" href="homepage.aspx">Home</a>
+                        </li>
+                       
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton Class="nav-link" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False">Online Attendance</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton Class="nav-link" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Staff login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton Class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Student Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton Class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton Class="nav-link" ID="LinkButton2" runat="server" Visible="False" OnClick="LinkButton2_Click">Log out</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton ID="LinkButton6" class="nav-link" Visible="False" runat="server" OnClick="Button11_Click">Student Personal Info</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton8" Visible="False" runat="server" OnClick="Button12_Click">Student Accademic Info</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton11" Visible="False" runat="server" OnClick="Button13_Click">Manage Class</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton Class="nav-link" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Visible="False">Hello User</asp:LinkButton>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+
+
+
+
+
+            </nav>
+        </div>
+        <!-- Main Content Placeholder -->
+        <div class="bgimg">
+            <asp:ContentPlaceHolder ID="ContentPlaceholder1" runat="server" ViewStateMode="Enabled">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+
+
+        <!-- ./Footer -->
+    </form>
+
+</body>
+</html>
